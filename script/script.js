@@ -37,3 +37,13 @@ function playRound(humanChoice, computerChoice) {
         return "tie";
     }
 }
+
+function numberToChoice(number) {
+    if (number === 1) {
+        return "paper";
+    }
+    if (number === 2) {
+        return "rock";
+    }
+    return "scissors";
+}
