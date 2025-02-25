@@ -21,8 +21,5 @@ function getHumanChoice() {
     } else {
         return "scissors";
     }
-    return humanChoice;
 }
 
-let humanScore = 0;
-let computerScore = 0;
