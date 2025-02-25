@@ -19,21 +19,21 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
     if (humanChoice > computerChoice) {
         if (humanChoice - computerChoice === 2) {
-            computerScore += 1
-            return "you lost"
+            computerScore += 1;
+            return "you lost";
         } else {
-            humanScore += 1
-            return "you won"
+            humanScore += 1;
+            return "you won";
         }
     } else if (computerChoice > humanChoice) {
         if (computerChoice - humanChoice === 2) {
-            humanScore += 1
-            return "you won"
+            humanScore += 1;
+            return "you won";
         } else {
-            computerScore += 1
-            return "you lost"
+            computerScore += 1;
+            return "you lost";
         }
     } else {
-        return "tie"
+        return "tie";
     }
 }
