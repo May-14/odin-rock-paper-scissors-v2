@@ -47,3 +47,19 @@ function numberToChoice(number) {
     }
     return "rock";
 }
+
+function playGame() {
+    console.log(playRound(getHumanChoice(), getComputerChoice()));
+    console.log(playRound(getHumanChoice(), getComputerChoice()));
+    console.log(playRound(getHumanChoice(), getComputerChoice()));
+    console.log(playRound(getHumanChoice(), getComputerChoice()));
+    console.log(playRound(getHumanChoice(), getComputerChoice()));
+    let finalMessage = computerScore > humanScore ? `Computer wins with a score of ${computerScore} to ${humanScore}` :
+     computerScore === humanScore ? `Game tied ${humanScore} to ${computerScore}.` :
+     `User wins with a score of ${humanScore} to ${computerScore}`;
+    humanScore = 0;
+    computerScore = 0;
+    return finalMessage;
+}
+
+console.log(playGame());
