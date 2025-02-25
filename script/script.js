@@ -18,23 +18,23 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice > computerChoice) {
-        if (humanChoice - computerChoice === 2) {
+        if ((humanChoice - computerChoice) === 2) {
             computerScore += 1;
-            return "you lost";
+            return "You lost, " + numberToChoice(computerChoice) + " beats " + numberToChoice(humanChoice) + ".";
         } else {
             humanScore += 1;
-            return "you won";
+           return "You won, " + numberToChoice(humanChoice) + " beats " + numberToChoice(computerChoice) + ".";
         }
     } else if (computerChoice > humanChoice) {
-        if (computerChoice - humanChoice === 2) {
+        if ((computerChoice - humanChoice) === 2) {
             humanScore += 1;
-            return "you won";
+            return "You won, " + numberToChoice(humanChoice) + " beats " + numberToChoice(computerChoice) + ".";
         } else {
             computerScore += 1;
-            return "you lost";
+            return "You lost, " + numberToChoice(computerChoice) + " beats " + numberToChoice(humanChoice) + ".";
         }
     } else {
-        return "tie";
+        return "Tie, both chose " + numberToChoice(computerChoice) + ".";
     }
 }
 
@@ -43,7 +43,7 @@ function numberToChoice(number) {
         return "paper";
     }
     if (number === 2) {
-        return "rock";
+        return "scissors";
     }
-    return "scissors";
+    return "rock";
 }
